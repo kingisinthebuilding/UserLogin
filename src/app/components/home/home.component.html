@@ -1,0 +1,24 @@
+<div class="bootstrap-container">
+    <div class="container text-center mt">
+        <div class="row">
+            <div class="col-md-6 offset-md-3" id="margin">
+                <img *ngIf="!loggedIn" class="img-fluid" style="width: 100px;" src="/assets/images.jpg" alt="" /><br><br>
+                <img *ngIf="loggedIn" class="img-fluid" style="width: 100px;" src="/assets/profile.gif" alt="" /><br><br>
+                <h1 *ngIf="!loggedIn">!!! Welcome to Login Page !!!</h1>
+                <h1 *ngIf="loggedIn">!!! User is Logged In !!!</h1><br>
+
+                <!-- When user is not logged in -->
+                <ng-container *ngIf="!loggedIn">
+                    <a href="/login"><button color="accent" mat-raised-button>Login</button></a>
+                </ng-container>
+
+                <!-- When user is logged in -->
+                <ng-container *ngIf="loggedIn">
+                    <a href="/dashboard"><button color="primary" mat-raised-button>User</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/file-upload"><button color="accent" mat-raised-button>Upload File</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/pagination"><button color="basics" mat-flat-button color="warn">Previous Table</button></a>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

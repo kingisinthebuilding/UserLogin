@@ -1,0 +1,86 @@
+.container
+{
+    padding: 30px;
+    justify-content: center;
+}
+#clear
+{
+    color: green;
+}
+.circular-image {
+    width: 150px; /* Set your desired width */
+    height: 150px; /* Set your desired height */
+    border-radius: 50%; /* Make it a circle by setting border-radius to 50% */
+    overflow: hidden; /* Hide overflow to ensure the content (image) stays within the circle */
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff; /* Optional: Add a border around the circle */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional: Add a box shadow */
+    margin-left: 43.5%;
+    margin-bottom: 10%;
+  }
+  
+  .circular-image img {
+    width: 100%; /* Make the image fill the circular container */
+    height: 100%; /* Maintain aspect ratio */
+    border-radius: 50%; /* Ensure the image itself is also circular */
+    object-fit:contain; /* Cover the entire container with the image */
+  }
+  
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.table
+{
+  text-align: center;
+  width: 100%;
+  font-weight: 100;
+}
+
+.paginate
+{
+  text-align: right;
+}
+
+.align
+{
+  margin-right: 2%;
+}
+
+#tables
+{
+  width: 100%;
+  text-align: center;
+  border: 1px solid lightgrey;
+}
+
+/* .container table
+{
+  width: 150%;
+} */
+
+/* .container table,th
+{
+  font-weight: 20px;
+  color: green;
+  background-color: tomato;
+  border: 1px solid red;
+  border-collapse: collapse;
+  margin-left: 12%;
+  padding: 6px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+*/
+
+/* .container tr,td
+{
+  border: 1px solid brown;
+  text-align: center;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+}  */

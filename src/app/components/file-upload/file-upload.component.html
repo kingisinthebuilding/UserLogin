@@ -1,0 +1,47 @@
+<div class="container text-center mt" id="center" *ngIf="flag">
+    <img class="img-fluid" style="width: 100px;" src="./assets/upload.gif" alt="" />
+    <h3 style="color: tomato;">Upload Excel File</h3>
+    <!-- <button mat-fab extended routerLink="/" color="warn"><mat-icon>home</mat-icon></button>--><br><br><br><br><br>
+    <input #fileInput (change)="selectFile($event)" type="file" accept=".xls,.xlsx" />
+    <button [disabled]="fileInput.files?.length === 0" (click)="uploadFile()" class="btn" mat-raised-button color="primary">Upload</button><br><br><br><br><br>
+    <button [disabled]="!fileUploadSuccess" mat-raised-button color="accent" routerLink="/pagination">View Table</button>
+</div>
+<div class="container text-center mt" *ngIf="!flag">
+    <div class="circular-image">
+        <img class="img-fluid" style="width: 200px;" src="./assets/load.gif" alt="" />
+    </div>
+    <h1 id="clear">Please Wait...Uploading...</h1>
+    <button class="btn" mat-raised-button color="warn" routerLink="/">Cancel</button>
+</div>
+<!-- <table class="table table-striped" *ngIf="flag" id="tables" border="1px">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">PRODUCT_ID</th>
+      <th scope="col">PRODUCT_DESC</th>
+      <th scope="col">PRODUCT_NAME</th>
+      <th scope="col">PRODUCT_PRICE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of excelData |paginate:{itemsPerPage:pageSize,currentPage:currentPage} ; let i = index">
+      <td scope="row">{{data.productId}}</td>
+      <td>{{data.productName}}</td>
+      <td>{{data.productDesc}}</td>
+      <td>{{data.productPrice}}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="paginate" *ngIf="flag">
+ <label><b>Items: &nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+ <select (change)="changePageSize($any($event))" class="align">
+   <option value="#">select</option>
+   <option value="5">5</option>
+   <option value="10">10</option>
+   <option value="20">20</option>
+   <option value="50">50</option>
+   <option value="100">100</option>
+   <option value="150">150</option>
+   <option value="200">200</option>
+  </select><br>
+</div>
+<pagination-controls (pageChange)="currentPage=$event" class="paginate" *ngIf="flag"></pagination-controls> -->

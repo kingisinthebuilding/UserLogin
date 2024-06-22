@@ -1,0 +1,46 @@
+.full-width {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.eyeicon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mat-form-field {
+    position: relative;
+}
+
+.mat-card {
+    max-width: 470px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+@keyframes bounceAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-50px);
+    }
+}
+
+.mat-card {
+    max-width: 470px;
+    margin: 0 auto;
+    margin-top: 3%;
+    animation: bounceAnimation 5s 2;
+}

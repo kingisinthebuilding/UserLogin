@@ -1,0 +1,16 @@
+.mat-elevation-z8,table
+{
+    width: 100%;
+    border: 1px solid lightgrey;
+}
+
+.mat-header-cell
+{
+    color: black;
+    font-weight: bolder;
+}
+
+.space
+{
+    margin-left: 70%;
+}

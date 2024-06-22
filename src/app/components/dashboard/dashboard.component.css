@@ -1,0 +1,21 @@
+.marquee,b
+{
+    color: red;
+    background-color: yellow;
+}
+
+#center
+{
+    margin-top: 5%;
+}
+
+.span , h1
+{
+    text-align: center;
+    color: darkblue;
+}
+
+.container
+{
+    margin-top: 10%;
+}

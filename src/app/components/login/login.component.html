@@ -1,0 +1,48 @@
+<br><br><mat-card class="col-md-7 offset-md-3">
+    <mat-card-content>
+      <div class="bootstrap-container">
+        <div class="container text-center mt">
+          <div class="row">
+            <div class="col-md-7 offset-md-2">
+              <img class="img-fluid" src="/assets/password.png" alt="Password Icon" style="width: 80px; margin-left: 25px;" />
+              <h1 class="text-center" style="margin-left: 20px;">Login Here!!</h1>
+              <br /><br />
+  
+              <form (ngSubmit)="OnSubmit()" [formGroup]="loginForm" style="margin-top: -20px; margin-right: -25px;">
+                <mat-form-field class="full-width" appearance="outline">
+                  <mat-label>Username</mat-label>
+                  <input formControlName="username" type="text" name="username" id="username" matInput [maxLength]="15" pattern="^[a-zA-Z]{5,15}$" />
+                  <mat-error *ngIf="loginForm.get('username')?.errors?.['pattern']">
+                    Username must be alphabetic characters only.
+                  </mat-error>
+                </mat-form-field>
+                <br /><br />
+  
+                <mat-form-field class="full-width" appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input formControlName="password" [type]="changetype ? 'password' : 'text'" name="password" matInput [maxLength]="15" />
+                  <button mat-icon-button matSuffix (click)="viewpass()" type="button">
+                    <mat-icon>{{ visible ? 'visibility' : 'visibility_off' }}</mat-icon>
+                  </button>
+                  <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                    Password is required.
+                  </mat-error>
+                </mat-form-field>
+                <br /><br />
+  
+                <div class="container text-center mt">
+                  <button type="submit" color="primary" mat-raised-button [disabled]="loginForm.invalid" style="margin-top: 12px; width: 100%;">
+                    Login
+                  </button>
+                  <br />
+                  <button type="reset" color="accent" mat-raised-button style="margin-top: 12px; width: 100%;">Reset</button>
+                </div>
+              </form>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  
